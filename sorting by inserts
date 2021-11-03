@@ -1,0 +1,17 @@
+void InsertionSort(int n, double a[])
+{
+  int location;
+  double newElement;
+
+  for (int i = 1; i < n; i++)
+  {
+    newElement = a[i];
+    location = i - 1;
+    while (location >= 0 && a[location] > newElement)
+    {
+      a[location + 1] = a[location];
+      location = location - 1;
+    }
+    a[location + 1] = newElement;
+  }
+}
